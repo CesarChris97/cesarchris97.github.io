@@ -93,6 +93,26 @@ th {
 }
 
 /* --- Section Hover Effect --- */
+/* --- Form Styling --- */
+/* Smooth transitions for input and textarea */
+input, textarea {
+   transition: border-color 0.3s ease;
+}
+
+/* Smooth transition for the submit button */
+input[type="submit"] {
+   transition: background-color 0.3s ease;
+}
+
+/* Optional: Add hover/focus effects as per assignment requirements */
+input:focus, textarea:focus {
+   border-color: #333;
+}
+
+input[type="submit"]:hover {
+   background-color: #555;
+   color: white;
+}
 /* This handles the "zoom in on hover" requirement */
 section {
     transition: transform 0.3s ease-in-out;
@@ -100,4 +120,22 @@ section {
 
 section:hover{
     transform: scale(1.02);
+}
+
+/* --- Responsive Layouts --- */
+
+/* Tablet: Medium screens */
+@media (min-width: 600px) {
+    main, nav, #contact {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+    }
+}
+
+/* Desktop: Large screens */
+@media (min-width: 1024px) {
+    main, nav, #contact {
+        gap: 40px;
+    }
 }
