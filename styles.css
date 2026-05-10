@@ -139,3 +139,63 @@ section:hover{
         gap: 40px;
     }
 }
+
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+}
+
+/* Task 4: Flexbox Container */
+.container {
+    display: flex;
+    flex-wrap: wrap; /* Allows stacking on small screens */
+    gap: 20px;
+    padding: 20px;
+    justify-content: center;
+}
+
+article {
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    flex: 1 1 300px; /* Base size for side-by-side */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+#contact {
+    flex: 1 1 100%; /* Makes contact form full width */
+    background: #e2e2e2;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+/* Task 5: Media Queries */
+
+/* Phones: Stack vertically */
+@media (max-width: 767px) {
+    .container {
+        flex-direction: column;
+    }
+}
+
+/* Tablets */
+@media (min-width: 768px) and (max-width: 1024px) {
+    article {
+        flex: 1 1 45%;
+    }
+}
+
+/* Desktops */
+@media (min-width: 1025px) {
+    article {
+        flex: 1 1 30%;
+    }
+}
