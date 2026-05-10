@@ -199,3 +199,56 @@ article {
         flex: 1 1 30%;
     }
 }
+
+/* Task 6: CSS Animations */
+
+/* 1. Fade-in effect for the whole body */
+body {
+    animation: fadeIn 1.5s ease-in;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* 2. Smooth hover effect for navigation links */
+nav a {
+    text-decoration: none;
+    color: white;
+    padding: 10px 15px;
+    transition: background-color 0.3s ease; /* Transition effect */
+    border-radius: 4px;
+}
+
+nav a:hover {
+    background-color: #555; /* Change background on hover */
+}
+
+/* 3. Transition for form elements */
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    transition: border-color 0.4s, background-color 0.4s; /* Required transition */
+}
+
+input:focus, textarea:focus {
+    border-color: #2980b9;
+    background-color: #fff;
+    outline: none;
+}
+
+button {
+    background-color: #2980b9;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
